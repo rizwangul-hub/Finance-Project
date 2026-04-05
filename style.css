@@ -1,0 +1,543 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d2f8dc;
+  padding: 0 40px;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 22px;
+  color: #2e4f21;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.logo:hover {
+  transform: scale(1.1);
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2e4f21;
+  font-size: 18px;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #2e4f21;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+#button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background-color: #2e4f21;
+  color: white !important;
+  transition: 0.3s;
+}
+#button:hover {
+  background-color: white;
+  color: #2e4f21 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #d2f8dc;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+.hero {
+  display: flex;
+  height: 90vh;
+  background-color: #d2f8dc;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.hero h1 {
+  width: 650px;
+  font-size: 60px;
+}
+.hero img {
+  width: 600px;
+  transition: all 0.5s ease;
+}
+.hero img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.hero h1 {
+  animation: fadeUp 1s ease;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+  gap: 20px;
+}
+.service h1 {
+  font-size: 45px;
+  width: 800px;
+}
+.service h1:hover {
+  color: #2e4f21;
+  transform: scale(1.03);
+}
+.tax {
+  display: flex;
+  width: 85%;
+  background-color: #a0f1bd;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  gap: 50px;
+  padding: 50px;
+}
+.tax img {
+  width: 600px;
+}
+.tax img:hover{
+  transform: rotate3d(39);
+  transform: scale(1.1);
+}
+#tax {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 50px;
+  margin-left: 300px;
+}
+.tax h2 {
+  font-size: 35px;
+}
+.tax div {
+  width: 480px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.tax div:hover{
+  color: white;
+}
+span button {
+  padding: 15px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  border: none;
+
+}
+span button:hover{
+  background-color: black;
+  color: white;
+}
+.client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.client h1 {
+  font-size: 40px;
+}
+.happy {
+  display: flex;
+  gap: 80px;
+  margin-top: 50px;
+}
+.designer {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+.designer div {
+  border-top: 1px solid;
+  padding: 30px 30px;
+  transition: all 0.3s ease;
+}
+
+.designer div:hover {
+  transform: translateX(10px);
+}
+.designer div:hover {
+  background-color: #2e4f21;
+  color: white;
+  padding: 30px;
+  border-top: 1px solid white;
+}
+.taylor {
+  border-left: 1px solid;
+  padding: 0 50px;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  transition: all 0.4s ease;
+}
+
+.taylor:hover {
+  transform: scale(1.02);
+}
+.taylor p {
+  font-size: 23px;
+  color: #2e4f21;
+}
+.profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.smart {
+  margin-top: 40px;
+}
+.text {
+  display: flex;
+  justify-content: center;
+}
+.text h2 {
+  width: 575px;
+  font-size: 40px;
+  color: #2e4f21;
+  padding: 0 50px;
+}
+.text p {
+  width: 575px;
+}
+.bussiner {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.bussiner div {
+  border-left: 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 15px 60px;
+  width: 380px;
+  color: #2e4f21;
+  padding-bottom: 30px;
+  transition: all 0.4s ease;
+}
+
+.bussiner div:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.bussiner span {
+  font-size: 30px;
+}
+.plan {
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+}
+.custom {
+  width: 590px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e4f21;
+  color: white;
+  border-radius: 20px;
+}
+.custom:hover,
+#custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+.connect {
+  height: 632px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.connect p {
+  width: 1040px;
+  font-size: 59px;
+  color: #2e4f21;
+  text-align: center;
+}
+.connect button {
+  background-color: #2e4f21;
+  color: aliceblue;
+  border-radius: 30px;
+  padding: 20px 20px;
+}
+.connect button:hover,
+.first button:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
+footer {
+  background-color: #2e4f21;
+  color: white;
+  height: 346px;
+  animation: fadeUp 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.first {
+  display: flex;
+  margin-left: 40px;
+}
+.first div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.first button {
+  border-radius: 30px;
+}
+.first h2 {
+  width: 50%;
+}
+.first div {
+  width: 50%;
+}
+.second {
+  display: flex;
+  margin-left: 40px;
+}
+.second div {
+  width: 50%;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero img {
+  animation: float 4s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+  
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    width: 100%;
+    font-size: 32px;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .service {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .service h1 {
+    width: 100%;
+    font-size: 28px;
+  }
+
+  .tax {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    padding: 20px;
+  }
+  #tax {
+flex-direction: column;
+    margin-left: 0;
+  }
+
+  .tax img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tax div {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .happy {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .taylor {
+    width: 100%;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .taylor p {
+    font-size: 16px;
+  }
+
+  .text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text h2,
+  .text p {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .bussiner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bussiner div {
+    width: 90%;
+  }
+
+  .plan {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom {
+    width: 90%;
+  }
+  .connect {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .connect p {
+    width: 100%;
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px) {
+
+  footer {
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  .first {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .first h2 {
+    width: 100%;
+  }
+
+  .first div {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .first button {
+    width: 100%;
+    padding: 12px;
+  }
+  .second {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .second div {
+    width: 100%;
+  }
+}
+}

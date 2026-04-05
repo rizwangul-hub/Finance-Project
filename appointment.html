@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header
+      class="bg-[#d2f8dc] sticky top-0 z-50 flex items-center justify-between px-6 h-20"
+    >
+      <!-- LOGO -->
+      <div
+        class="text-2xl font-bold text-[#2e4f21] hover:scale-110 transition-all duration-300"
+      >
+        Noble Finances
+      </div>
+
+      <!-- MENU LINKS -->
+      <nav>
+        <ul id="navLinks" class="hidden md:flex gap-6 items-center">
+          <li>
+            <a href="index.html" class="text-[#2e4f21] hover:underline">Home</a>
+          </li>
+          <li>
+            <a href="Service.html" class="text-[#2e4f21] hover:underline"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="appointment.html"
+              class="bg-[#2e4f21] text-white px-4 py-4 rounded-lg hover:bg-white hover:text-[#2e4f21] transition-all"
+              style="padding: 10px 18px"
+              >Book an Appointment</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- HAMBURGER -->
+      <div id="menuToggle" class="md:hidden text-3xl cursor-pointer">☰</div>
+    </header>
+
+    <!-- MOBILE NAV -->
+    <div
+      id="mobileMenu"
+      class="hidden bg-[#d2f8dc] flex flex-col items-center gap-4 p-4 md:hidden"
+    >
+      <a href="index.html" class="text-[#2e4f21] text-lg hover:underline"
+        >Home</a
+      >
+      <a href="Service.html" class="text-[#2e4f21] text-lg hover:underline"
+        >Services</a
+      >
+      <a
+        href="appointment.html"
+        class="bg-[#2e4f21] text-white px-4 py-2 rounded-lg hover:bg-white hover:text-[#2e4f21] transition-all"
+        >Book an Appointment</a
+      >
+    </div>
+    <div
+      class="flex flex-col md:flex-row justify-center items-center min-h-screen px-4 md:px-10 gap-10"
+      style="background-color: #d2f8dc"
+    >
+      <!-- IMAGE -->
+      <div class="w-full md:w-[900px] flex justify-center overflow-hidden">
+        <img
+          class="w-[80%] md:w-[700px] animate-float transition-all duration-500 hover:scale-105 md:hover:scale-110 hover:rotate-2 hover:shadow-2xl"
+          src="image/Image-10.png"
+          alt=""
+        />
+      </div>
+
+      <!-- TEXT -->
+      <div
+        class="w-full md:w-[500px] flex flex-col gap-6 md:gap-9 justify-center text-center md:text-left"
+      >
+        <h1 class="text-[28px] md:text-[60px] leading-tight">
+          Book an appointment now
+        </h1>
+        <p class="text-sm md:text-base">
+          Serving individuals and small businesses since 1987
+        </p>
+        <button id="button" class="mx-auto md:mx-0">Contact Us</button>
+      </div>
+    </div>
+    <footer>
+      <div class="first">
+        <h2>Noble Finances</h2>
+        <div>
+          <p>Services</p>
+          <span><button>Book An Appointment</button></span>
+        </div>
+      </div>
+      <div class="second">
+        <div>
+          <p>Financial Clarity You Can Trust</p>
+          <p>
+            Trusted financial guidance for every stage of life and business
+            since 1987
+          </p>
+        </div>
+        <div>©Rizwan 2026 All Rights Reserved</div>
+      </div>
+    </footer>
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+.financail {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: #2e4f21;
+  animation: fadeUp 1s ease;
+}
+.financail div {
+  width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  animation: fadeUp 1.2s ease;
+}
+.financail h1 {
+  font-size: 80px;
+  font-weight: lighter;
+  transition: all 0.3s ease;
+}
+
+.financail h1:hover {
+  letter-spacing: 2px;
+  transform: translateY(-5px);
+}
+.financail p {
+  font-size: 20px;
+  width: 600px;
+}
+.financail p:hover {
+  transform: scale(1.02);
+  color: #1f3a16;
+}
+.financail div img {
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.financail div img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+.breaker {
+  width: 100%;
+  height: 90vh;
+}
+.work {
+  color: #2e4f21;
+  height: 250px;
+  width: 1120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: 300px;
+}
+.work h1 {
+  font-weight: lighter;
+  font-size: 50px;
+  animation: fadeUp 1.2s ease;
+}
+
+.work h1:hover {
+  transform: translateX(10px);
+  letter-spacing: 1px;
+}
+.number {
+  display: flex;
+  justify-content: space-around;
+  color: #2e4f21;
+}
+.withNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.number h1 {
+  font-size: 190px;
+  font-weight: lighter;
+  transition: all 0.4s ease;
+}
+
+.number h1:hover {
+  transform: scale(1.1);
+  color: #1f3a16;
+}
+.number div {
+  width: 370px;
+  transition: all 0.4s ease;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.number div:hover {
+  transform: translateY(-15px) scale(1.03);
+  background-color: #d2f8dc;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.number h2 {
+  font-size: 50px;
+  font-weight: lighter;
+  transition: all 0.3s ease;
+}
+
+.number h2:hover {
+  letter-spacing: 1px;
+  transform: translateX(5px);
+}
+.number div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.image {
+  width: 590px;
+  animation: float 4s ease-in-out infinite;
+}
+.breaker {
+  background: linear-gradient(180deg, #d2f8dc, #ffffff);
+}
+.number div:nth-child(1) {
+  animation: fadeUp 0.8s ease;
+}
+.number div:nth-child(2) {
+  animation: fadeUp 1s ease;
+}
+.number div:nth-child(3) {
+  animation: fadeUp 1.2s ease;
+}
+@media (max-width: 768px) {
+  .financail {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .financail div {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .financail h1 {
+    font-size: 32px;
+  }
+
+  .financail p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .financail div img {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .work {
+    width: 100%;
+    height: auto;
+    margin: 40px 0;
+    padding: 0 20px;
+  }
+
+  .work h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .number {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .number div {
+    width: 90%;
+    text-align: center;
+  }
+
+  .number h1 {
+    font-size: 80px;
+  }
+
+  .number h2 {
+    font-size: 24px;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 300px;
+  }
+}
